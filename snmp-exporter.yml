@@ -1,3 +1,5 @@
+
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -29,7 +31,7 @@ spec:
     spec:
       containers:
       - name: snmp-exporter
-        image: prom/snmp-exporter:v0.9.0
+        image: prom/snmp-exporter:v0.11.0
         ports:
         - containerPort: 9116
         volumeMounts:
@@ -92,7 +94,7 @@ data:
       version: 2
       auth:
         community: ciscopublic
-    ubuntu:
+    raspi:
       walk:
       - 1.3.6.1.2.1.2.2.1.10
       - 1.3.6.1.2.1.2.2.1.14
